@@ -1,0 +1,28 @@
+# Avell RGB Control
+# ITE 8291 per-key RGB keyboard
+
+# RGB individual das teclas
+SUBSYSTEM=="leds", KERNEL=="rgb:kbd_backlight*", DRIVERS=="ite_8291", \
+RUN+="/bin/chgrp video /sys%p/multi_intensity", \
+RUN+="/bin/chmod 0664 /sys%p/multi_intensity"
+
+# Brilho global do teclado
+SUBSYSTEM=="leds", KERNEL=="rgb:kbd_backlight", DRIVERS=="ite_8291", \
+RUN+="/bin/chgrp video /sys%p/brightness", \
+RUN+="/bin/chmod 0664 /sys%p/brightness"
+
+# Buffer de atualização do teclado
+SUBSYSTEM=="hid", DRIVER=="ite_8291", KERNEL=="0003:048D:CE00.*", \
+ATTR{controls/buffer_input}=="*", \
+RUN+="/bin/chgrp video /sys%p/controls/buffer_input", \
+RUN+="/bin/chmod 0664 /sys%p/controls/buffer_input"
+
+# Lightbar RGB
+SUBSYSTEM=="leds", KERNEL=="lightbar_rgb:*:status", \
+RUN+="/bin/chgrp video /sys%p/brightness", \
+RUN+="/bin/chmod 0664 /sys%p/brightness"
+
+# Lightbar animation
+SUBSYSTEM=="leds", KERNEL=="lightbar_animation::status", \
+RUN+="/bin/chgrp video /sys%p/brightness", \
+RUN+="/bin/chmod 0664 /sys%p/brightness"

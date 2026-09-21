@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Avell RGB Control
+Comment=Controle a iluminação RGB do teclado e da Lightbar
+Exec=avell-rgb-control
+Icon=io.github.jobsr.AvellRGBControl
+Terminal=false
+Type=Application
+Categories=Settings;HardwareSettings;
+Keywords=Avell;RGB;Keyboard;Teclado;Lightbar;LED;
+StartupNotify=true

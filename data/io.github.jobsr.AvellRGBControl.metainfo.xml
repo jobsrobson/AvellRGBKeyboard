@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.jobsr.AvellRGBControl</id>
+
+  <name>Avell RGB Control</name>
+
+  <summary>
+    Controle de iluminação RGB para notebooks Avell compatíveis
+  </summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <description>
+    <p>
+      Avell RGB Control é uma interface gráfica para controlar
+      a iluminação RGB de notebooks Avell compatíveis com o
+      controlador ITE 8291.
+    </p>
+
+    <p>
+      O aplicativo permite configurar individualmente as cores
+      das teclas, controlar o brilho global do teclado, controlar
+      a Lightbar e salvar configurações em perfis.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">
+    io.github.jobsr.AvellRGBControl.desktop
+  </launchable>
+
+  <provides>
+    <binary>avell-rgb-control</binary>
+  </provides>
+
+  <categories>
+    <category>Settings</category>
+    <category>HardwareSettings</category>
+  </categories>
+
+  <releases>
+    <release version="0.1.0" date="2026-09-21">
+      <description>
+        <p>Primeira versão do Avell RGB Control.</p>
+      </description>
+    </release>
+  </releases>
+</component>

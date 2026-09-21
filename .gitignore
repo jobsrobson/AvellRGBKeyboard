@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Meson
+build/
+_build/
+
+# IDE
+.vscode/
+.idea/
+
+# Temporários
+*.swp
+*.swo
+*~
+
+# Pacotes
+*.deb
+*.tar.gz
+*.tar.xz
